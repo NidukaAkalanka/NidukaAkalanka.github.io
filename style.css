@@ -1,0 +1,566 @@
+html {
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  background: rgb(22, 22, 22);
+  color: #aaa;
+  overflow-x: hidden;
+}
+img {
+  pointer-events: none;
+}
+a{
+  text-decoration: none;
+}
+.navbar {
+  position: fixed;
+  background-color: rgb(22, 22, 22);
+  top: 0;
+  width: 100%;
+}
+.navbar a {
+  float: left;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.navbar img {
+  float: right;
+  height: 40px;
+  padding-right: 15px;
+  padding-top: 5px;
+}
+.navbar a:hover {
+  color: #aaa;
+  text-shadow: 1px 1px 0.2px #aaa, 1px 1px 0.2px #aaa;
+  transition: 500ms;
+}
+h1 {
+  font-weight: 200;
+  font-size: 3.5em;
+  margin-left: 5px;
+  padding-bottom: 0.1px;
+}
+
+h2 {
+  color: #888;
+  font-size: 50px;
+  font-weight: 200;
+  margin-left: 5px;
+  padding-top: 0.1px;
+}
+.dm {
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.date {
+  padding: 10px;
+}
+.perfect {
+  padding-top: 0px;
+  margin-top: 0px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+.myimg {
+  float: right;
+  padding-left: 100px;
+  padding-bottom: 100px;
+  height: 700px;
+  margin-top: 100px;
+}
+.mydesc {
+  text-align: left;
+  margin-top: 250px;
+}
+.mysing {
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding: 0;
+}
+.cvsection {
+  display: flex;
+}
+.cv {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.cvdown {
+  height: 35px;
+  padding-left: 20px;
+}
+.topic1 {
+  font-size: 30px;
+}
+.mysing {
+  margin-left: 120px;
+  padding-top: 50px;
+  padding-bottom: 0;
+  height: 300px;
+  width: 300px;
+}
+.topic2 {
+  font-size: 30px;
+  margin-top: 145px;
+}
+.p1 {
+  height: 250px;
+  float: left;
+  margin-right: 90px;
+  margin-bottom: 90px;
+}
+.p1topic {
+  font-size: 20px;
+}
+.list1 {
+  margin-left: 50px;
+}
+.p2 {
+  height: 250px;
+  float: right;
+  margin-left: 90px;
+  margin-bottom: 90px;
+}
+.p3 {
+  height: 250px;
+  float: left;
+  margin-right: 90px;
+  margin-bottom: 90px;
+}
+.p4 {
+  height: 250px;
+  float: right;
+  margin-left: 90px;
+  margin-bottom: 90px;
+}
+.project4 {
+  margin-bottom: 200px;
+}
+.many {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 100px;
+}
+.topic3 {
+  font-size: 30px;
+}
+.whymepara {
+  text-align: left;
+}
+.newimg {
+  height: 300px;
+  float: left;
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 55px;
+}
+.newt {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.handcode {
+  float: right;
+}
+.handcodeimg {
+  float: right;
+  height: 180px;
+  padding-top: 0;
+  margin-top: 150;
+  margin-left: 0;
+  padding-left: 120px;
+  margin-right: 20px;
+  margin-bottom: 100px;
+  padding-bottom: 0;
+}
+.handocedet {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-right: 250px;
+  margin-left: 20px;
+  margin-top: 0;
+}
+.handceodep {
+  margin-left: 20px;
+  margin-bottom: 60px;
+}
+.customizeimg {
+  float: left;
+  height: 190px;
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-left: 10px;
+  margin-bottom: 60px;
+}
+.customuizet {
+  margin-top: 60px;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.lowbudimg {
+  height: 180px;
+  float: left;
+  margin-top: 10px;
+  margin-right: 80px;
+  margin-left: 10px;
+}
+.lowbudt {
+  font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 10;
+}
+.lowbudimg {
+  height: 180px;
+  margin-left: 20px;
+  margin-bottom: 550ox;
+}
+.friendt {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.customize {
+  display: none;
+}
+.friendimg {
+  height: 220px;
+  float: right;
+  margin-left: 140px;
+  margin-right: 20px;
+}
+.friendt{
+  margin-top: 140px;
+  margin-left: 10px;
+}
+.friendp{
+  margin-left: 10px;
+}
+.contactmet{
+  font-size: 50px;
+  text-align: center;
+  margin-top: 260px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+.begin{
+  font-size: 50px;
+  text-align: center;
+  margin-top: 0;
+}
+.begin1{
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.begin2{
+  font-size: 20px;
+  font-weight: bold;
+}
+.mailme{
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: rgb(22, 22, 22);
+  font-weight: bolder;
+}
+.rights1 , .rights2, .rights3{
+  margin: 5px;
+  padding: 0;
+}
+.conttitle{
+  font-size: 35px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.contactlist{
+  list-style: none;
+  display: flex;
+  width: 500%;
+  height: 100px;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  display: inline;
+  float: inline-start;
+}
+#social li {
+  list-style-type: none;
+  text-align: center;
+  display: inline-block;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#social li:first-child {
+  margin-left: 0px;
+}
+
+#social li:last-child {
+  margin-right: 100px;
+}
+.facebook {
+  width: 50px;
+  height: 50px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.facebook .border {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all .2s ease-in-out;
+}
+
+.facebook .border:hover {
+  background: #3b5998;
+  border-color: #436aaf;
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.fa.fa-facebook {
+  font-size: 25px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.twitter {
+  width: 50px;
+  height: 50px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.twitter .border {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all .2s ease-in-out;
+}
+
+.twitter .border:hover {
+  background: #00aced;
+  border-color: #72c6e6;
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.fa.fa-twitter {
+  font-size: 25px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.instagram {
+  width: 50px;
+  height: 50px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.instagram .border {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all .2s ease-in-out;
+}
+
+.instagram .border:hover {
+  background: #ff01dd;
+  border-color: #fb96ff;
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.fa.fa-instagram {
+  font-size: 25px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.telegram {
+  width: 50px;
+  height: 50px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.telegram .border {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all .2s ease-in-out;
+}
+
+.telegram .border:hover {
+  background: #0086bb;
+  border-color: #96f8ff;
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.fa.fa-telegram {
+  font-size: 25px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.github {
+  width: 50px;
+  height: 50px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.github .border {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all .2s ease-in-out;
+}
+
+.github .border:hover {
+  background: #1b1b1b;
+  border-color: #f4fff4;
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.fa.fa-github {
+  font-size: 25px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.whatsapp {
+  width: 50px;
+  height: 50px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.whatsapp .border {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all .2s ease-in-out;
+}
+
+.whatsapp .border:hover {
+  background: #00bb19;
+  border-color: #96ffb0;
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+}
+.fa.fa-whatsapp {
+  font-size: 25px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.pinterest {
+  width: 50px;
+  height: 50px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.pinterest .border {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all .2s ease-in-out;
+}
+
+.pinterest .border:hover {
+  background: #880303;
+  border-color: #ffabab;
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+}
+.fa.fa-pinterest {
+  font-size: 25px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.youtube {
+  width: 50px;
+  height: 50px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.youtube .border {
+  background: transparent;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all .2s ease-in-out;
+}
+
+.youtube .border:hover {
+  background: #ff2020;
+  border-color: #ffbbbb;
+  color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+}
+.fa.fa-youtube {
+  font-size: 25px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
