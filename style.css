@@ -1,566 +1,832 @@
-html {
-  scroll-behavior: smooth;
-  max-width: 100%;
+html{
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div{
+    margin-top: -1px; 
+    padding-top: 1px;
 }
 body {
-  font-family: "Raleway", sans-serif;
-  background: rgb(22, 22, 22);
-  color: #aaa;
-  overflow-x: hidden;
-}
-img {
-  pointer-events: none;
-}
-a{
-  text-decoration: none;
-}
-.navbar {
-  position: fixed;
-  background-color: rgb(22, 22, 22);
-  top: 0;
-  width: 100%;
-}
-.navbar a {
-  float: left;
-  color: #aaa;
-  text-align: center;
-  padding: 20px;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-}
-.navbar img {
-  float: right;
-  height: 40px;
-  padding-right: 15px;
-  padding-top: 5px;
-}
-.navbar a:hover {
-  color: #aaa;
-  text-shadow: 1px 1px 0.2px #aaa, 1px 1px 0.2px #aaa;
-  transition: 500ms;
-}
-h1 {
-  font-weight: 200;
-  font-size: 3.5em;
-  margin-left: 5px;
-  padding-bottom: 0.1px;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
 }
 
-h2 {
-  color: #888;
-  font-size: 50px;
-  font-weight: 200;
-  margin-left: 5px;
-  padding-top: 0.1px;
-}
-.dm {
-  display: flex;
-  font-size: 30px;
-  justify-content: center;
-  padding: 10px;
-  padding-top: 20px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-}
-.date {
-  padding: 10px;
-}
-.perfect {
-  padding-top: 0px;
-  margin-top: 0px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-}
-.myimg {
-  float: right;
-  padding-left: 100px;
-  padding-bottom: 100px;
-  height: 700px;
-  margin-top: 100px;
-}
-.mydesc {
-  text-align: left;
-  margin-top: 250px;
-}
-.mysing {
-  margin-top: 0;
-  margin-bottom: 50px;
-  padding: 0;
-}
-.cvsection {
-  display: flex;
-}
-.cv {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-.cvdown {
-  height: 35px;
-  padding-left: 20px;
-}
-.topic1 {
-  font-size: 30px;
-}
-.mysing {
-  margin-left: 120px;
-  padding-top: 50px;
-  padding-bottom: 0;
-  height: 300px;
-  width: 300px;
-}
-.topic2 {
-  font-size: 30px;
-  margin-top: 145px;
-}
-.p1 {
-  height: 250px;
-  float: left;
-  margin-right: 90px;
-  margin-bottom: 90px;
-}
-.p1topic {
-  font-size: 20px;
-}
-.list1 {
-  margin-left: 50px;
-}
-.p2 {
-  height: 250px;
-  float: right;
-  margin-left: 90px;
-  margin-bottom: 90px;
-}
-.p3 {
-  height: 250px;
-  float: left;
-  margin-right: 90px;
-  margin-bottom: 90px;
-}
-.p4 {
-  height: 250px;
-  float: right;
-  margin-left: 90px;
-  margin-bottom: 90px;
-}
-.project4 {
-  margin-bottom: 200px;
-}
-.many {
-  text-align: center;
-  font-size: 30px;
-  margin-top: 100px;
-}
-.topic3 {
-  font-size: 30px;
-}
-.whymepara {
-  text-align: left;
-}
-.newimg {
-  height: 300px;
-  float: left;
-  padding-top: 0;
-  margin-top: 0;
-  padding-bottom: 55px;
-}
-.newt {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-.handcode {
-  float: right;
-}
-.handcodeimg {
-  float: right;
-  height: 180px;
-  padding-top: 0;
-  margin-top: 150;
-  margin-left: 0;
-  padding-left: 120px;
-  margin-right: 20px;
-  margin-bottom: 100px;
-  padding-bottom: 0;
-}
-.handocedet {
-  font-size: 30px;
-  margin-bottom: 20px;
-  margin-right: 250px;
-  margin-left: 20px;
-  margin-top: 0;
-}
-.handceodep {
-  margin-left: 20px;
-  margin-bottom: 60px;
-}
-.customizeimg {
-  float: left;
-  height: 190px;
-  margin-top: 20px;
-  margin-right: 50px;
-  margin-left: 10px;
-  margin-bottom: 60px;
-}
-.customuizet {
-  margin-top: 60px;
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-.lowbudimg {
-  height: 180px;
-  float: left;
-  margin-top: 10px;
-  margin-right: 80px;
-  margin-left: 10px;
-}
-.lowbudt {
-  font-size: 30px;
-  margin-bottom: 20px;
-  margin-top: 10;
-}
-.lowbudimg {
-  height: 180px;
-  margin-left: 20px;
-  margin-bottom: 550ox;
-}
-.friendt {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-.customize {
-  display: none;
-}
-.friendimg {
-  height: 220px;
-  float: right;
-  margin-left: 140px;
-  margin-right: 20px;
-}
-.friendt{
-  margin-top: 140px;
-  margin-left: 10px;
-}
-.friendp{
-  margin-left: 10px;
-}
-.contactmet{
-  font-size: 50px;
-  text-align: center;
-  margin-top: 260px;
-  margin-bottom: 10px;
-  padding: 0;
-}
-.begin{
-  font-size: 50px;
-  text-align: center;
-  margin-top: 0;
-}
-.begin1{
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-}
-.begin2{
-  font-size: 20px;
-  font-weight: bold;
-}
-.mailme{
-  display: flex;
-  justify-content: center;
+/* Introduction section */
+.intro {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, #681191 , #000000 );
+    color: rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
 }
 
-.footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: white;
-  color: rgb(22, 22, 22);
-  font-weight: bolder;
-}
-.rights1 , .rights2, .rights3{
-  margin: 5px;
-  padding: 0;
-}
-.conttitle{
-  font-size: 35px;
-  margin-bottom: 60px;
-  text-align: center;
-}
-.contactlist{
-  list-style: none;
-  display: flex;
-  width: 500%;
-  height: 100px;
-  display: table-cell;
-  vertical-align: middle;
-  width: 100%;
-  margin: 0 auto;
-  justify-content: center;
-  display: inline;
-  float: inline-start;
-}
-#social li {
-  list-style-type: none;
-  text-align: center;
-  display: inline-block;
-  margin-left: 30px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-#social li:first-child {
-  margin-left: 0px;
+.intro-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#social li:last-child {
-  margin-right: 100px;
-}
-.facebook {
-  width: 50px;
-  height: 50px;
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+.text-container {
+    width: 80%;
+    padding-left: 5%;
+    z-index: 2;
 }
 
-.facebook .border {
-  background: transparent;
-  outline: none;
-  color: rgba(255, 255, 255, 0.3);
-  width: 50px;
-  height: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  transition: all .2s ease-in-out;
+.intro h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
 }
 
-.facebook .border:hover {
-  background: #3b5998;
-  border-color: #436aaf;
-  color: rgba(255, 255, 255, 0.9);
-  transform: scale(1.2);
-  cursor: pointer;
+.intro h2 {
+    font-size: 5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
 }
 
-.fa.fa-facebook {
-  font-size: 25px;
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.twitter {
-  width: 50px;
-  height: 50px;
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+.intro h3 {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 4rem;
+    line-height: 1.1;
 }
 
-.twitter .border {
-  background: transparent;
-  outline: none;
-  color: rgba(255, 255, 255, 0.3);
-  width: 50px;
-  height: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  transition: all .2s ease-in-out;
+.intro p {
+    font-size: 1.5rem;
+    max-width: 600px;
 }
 
-.twitter .border:hover {
-  background: #00aced;
-  border-color: #72c6e6;
-  color: rgba(255, 255, 255, 0.9);
-  transform: scale(1.2);
-  cursor: pointer;
+
+/* Horizontal scrolling section */
+.horizontal-section {
+    position: relative;
+    height: 300vh; /* This height determines how long we scroll */
+    background-color: #000000;
 }
 
-.fa.fa-twitter {
-  font-size: 25px;
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.instagram {
-  width: 50px;
-  height: 50px;
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.instagram .border {
-  background: transparent;
-  outline: none;
-  color: rgba(255, 255, 255, 0.3);
-  width: 50px;
-  height: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  transition: all .2s ease-in-out;
+.horizontal-container {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    background-image: url(./assests/N.svg);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
-.instagram .border:hover {
-  background: #ff01dd;
-  border-color: #fb96ff;
-  color: rgba(255, 255, 255, 0.9);
-  transform: scale(1.2);
-  cursor: pointer;
+.horizontal-content {
+    position: absolute;
+    height: 100%;
+    width: 400%; /* Width of the horizontal content */
+    display: flex;
+    align-items: center;
+    will-change: transform;
 }
 
-.fa.fa-instagram {
-  font-size: 25px;
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.telegram {
-  width: 50px;
-  height: 50px;
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+/* Line that shows scroll progress */
+.scroll-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 3px;
+    background-color: #9834db;
+    transform: translateY(-50%);
+    z-index: 0;
 }
 
-.telegram .border {
-  background: transparent;
-  outline: none;
-  color: rgba(255, 255, 255, 0.3);
-  width: 50px;
-  height: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  transition: all .2s ease-in-out;
+/* Main Circles Container */
+.circle-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10%;
 }
 
-.telegram .border:hover {
-  background: #0086bb;
-  border-color: #96f8ff;
-  color: rgba(255, 255, 255, 0.9);
-  transform: scale(1.2);
-  cursor: pointer;
+/* Main Category Circles */
+.main-circle {
+    width: 28vmin; /* Viewport-relative size */
+    height: 28vmin; /* Same value for perfect circle */
+    border-radius: 50%;
+    background-color: #521166;
+    border: 3px solid #9758c2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 
-.fa.fa-telegram {
-  font-size: 25px;
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.github {
-  width: 50px;
-  height: 50px;
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.github .border {
-  background: transparent;
-  outline: none;
-  color: rgba(255, 255, 255, 0.3);
-  width: 50px;
-  height: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  transition: all .2s ease-in-out;
+.main-circle::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    z-index: 1;
 }
 
-.github .border:hover {
-  background: #1b1b1b;
-  border-color: #f4fff4;
-  color: rgba(255, 255, 255, 0.9);
-  transform: scale(1.2);
-  cursor: pointer;
-}
-.fa.fa-github {
-  font-size: 25px;
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.whatsapp {
-  width: 50px;
-  height: 50px;
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+.main-circle:hover::before {
+    border-color: #c970db; /* Purple outline */
 }
 
-.whatsapp .border {
-  background: transparent;
-  outline: none;
-  color: rgba(255, 255, 255, 0.3);
-  width: 50px;
-  height: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  transition: all .2s ease-in-out;
+.circle-text {
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    max-width: 120%; /* Keep text inside circle */
+    font-size: calc(1vmin + 0.7rem); /* Responsive font size */
+    z-index: 2;
 }
 
-.whatsapp .border:hover {
-  background: #00bb19;
-  border-color: #96ffb0;
-  color: rgba(255, 255, 255, 0.9);
-  transform: scale(1.2);
-}
-.fa.fa-whatsapp {
-  font-size: 25px;
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.pinterest {
-  width: 50px;
-  height: 50px;
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+/* Glow effect for circles */
+.main-circle.active {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #9834db;
 }
 
-.pinterest .border {
-  background: transparent;
-  outline: none;
-  color: rgba(255, 255, 255, 0.3);
-  width: 50px;
-  height: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  transition: all .2s ease-in-out;
+/* Branches and Subcircles */
+.branches-container {
+    position: absolute;
+    width: 40vmin;
+    height: 40vmin;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
 }
 
-.pinterest .border:hover {
-  background: #880303;
-  border-color: #ffabab;
-  color: rgba(255, 255, 255, 0.9);
-  transform: scale(1.2);
-}
-.fa.fa-pinterest {
-  font-size: 25px;
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-.youtube {
-  width: 50px;
-  height: 50px;
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+.main-circle.expanded .branches-container {
+    opacity: 1;
+    pointer-events: all;
 }
 
-.youtube .border {
-  background: transparent;
-  outline: none;
-  color: rgba(255, 255, 255, 0.3);
-  width: 50px;
-  height: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  transition: all .2s ease-in-out;
+.branch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    transform: rotate(0deg);
+    width: 25vmin; /* Length of the branch */
+    height: 2px;
+    background-color: #521166;
+    z-index: 8;
 }
 
-.youtube .border:hover {
-  background: #ff2020;
-  border-color: #ffbbbb;
-  color: rgba(255, 255, 255, 0.9);
-  transform: scale(1.2);
+.subcircle {
+    position: absolute;
+    top: 50%;
+    right: -6vmin; /* Position the subcircle at the end of the branch */
+    transform: translate(50%, -50%);
+    width: 20vmin; /* Smaller than main circles */
+    height: 20vmin;
+    border-radius: 50%;
+    background-color: #3a0d4a;
+    border: 2px solid #7e4892;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    z-index: 1;
 }
-.fa.fa-youtube {
-  font-size: 25px;
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+
+.subcircle-text {
+    text-align: center;
+    padding: 0.7rem;
+    font-weight: bold;
+    color: #ffffff;
+    max-width: 90%;
+    font-size: calc(0.8vmin + 0.5rem); /* Smaller text */
+}
+
+.subcircle:hover {
+    transform: translate(50%, -50%) scale(1.15);
+    box-shadow: 0 0 20px rgba(147, 112, 219, 0.8);
+    z-index: 1;
+}
+
+.subcircle.active {
+    transform: translate(50%, -50%) scale(1.2);
+    box-shadow: 0 0 30px rgba(201, 112, 219, 0.9);
+    z-index: 1;
+}
+
+.subcircle::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.subcircle:hover::before {
+    border-color: #e08ce9; /* Lighter purple outline */
+}
+
+/* Modal card that appears when clicking on a subcircle */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(23, 2, 26, 0.7);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal-card {
+    background-color: #0a0a0a; /* Dark background for theme */
+    width: 65vmin; /* Relative to viewport for responsiveness */
+    height: 65vmin; /* Equal height for circle shape */
+    padding: 2rem;
+    border-radius: 50%; /* Full circle */
+    position: relative;
+    transform: scale(0);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: visible
+    ; /* Keep content within circle */
+    color: #e0e0e0; /* Light text for dark background */
+}
+
+.modal-card.open {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10%;
+    right: 25%;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #de5aff;
+}
+
+.modal-title {
+    margin-bottom: 1rem;
+    color: #db34bf;
+    font-size: 1.5rem
+}
+
+.modal-content{
+    line-height: 1.6;
+    max-width: 80%;
+    max-height: 55%; /* Adjust to make room for time period */
+    overflow-y: auto;
+    /* Style the scrollbar for better aesthetic */
+    scrollbar-width: thin;
+    scrollbar-color: #9370DB #0a0a0a;
+    margin-bottom: 1.5rem;
+    overflow: auto;
+}
+
+.modal-scroll-container {
+    width: 100%;
+}
+
+.time-period {
+    color: #9370DB;
+    font-style: italic;
+    margin-top: 1rem;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.final-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #000000, #681191 );
+    color: #e0e0e0;
+    padding: 2rem;
+    text-align: center;
+}
+  
+.final-section h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #cd8ef7;
+}
+  
+.final-section p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+  
+.cta-button {
+    background-color: #915fb9;
+    color: white;
+    border: 2px solid#915fb9;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+  
+.cta-button:hover {
+    background-color: #000000;
+    border: 2px solid#000000;;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #000000;
+    color: #ffffff;
+}
+
+.social-section {
+    padding: 5rem 2rem;
+    background-color: #0a0a0a;
+    text-align: center;
+}
+  
+.social-section h3 {
+    color: #9370DB;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+  
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+  
+.social-icon {
+    font-size: 2rem;
+    color: #9370DB;
+    transition: all 0.3s ease;
+}
+  
+.social-icon:hover {
+    color: #8a2be2;
+    transform: scale(1.2) rotate(5deg);
+}
+  
+footer {
+    background-color: #0a0a0a;
+    color: #6c6c6c;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #2d1f3d;
+}
+  
+.footer-content p {
+    margin: 0.5rem 0;
+}
+  
+.footer-content a {
+    color: #9370DB;
+    text-decoration: none;
+    font-weight: bold;
+}
+  
+.footer-content a:hover {
+    color: #8a2be2;
+}
+
+.showcase-circle {
+    position: absolute;
+    width: 25vmin;
+    height: 25vmin;
+    border-radius: 50%;
+    background-color: #1a0920;
+    border: 2px solid #9834db;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.showcase-circle:hover {
+    transform: scale(1.1);
+}
+
+.showcase-circle-1 {
+    top: -15%;
+    left: -25%;
+}
+
+.showcase-circle-2 {
+    bottom: -15%;
+    right: -15%;
+}
+
+.showcase-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(45deg, #521166, #9834db);
+}
+
+
+span.txt-rotate {
+    display: inline-block;
+    text-align: left;
+    color: #d400ff;
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+
+.profile-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+}
+
+.circle-bg {
+    position: absolute;
+    right: -20%;
+    width: 90%;
+    height: 140%;
+    border-radius: 50%;
+    background: rgba(116, 7, 206, 0.4);
+    overflow: hidden;
+}
+
+.circle-bg::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.circle-bg::after {
+    content: '';
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    background: rgba(217, 164, 255, 0.8);
+}
+
+.profile-image {
+    position: absolute;
+    height: 120%;
+    z-index: 1;
+    /* object-fit: cover;
+    clip-path: circle(30% at 60% 50%); */
+}
+
+.results-table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+.results-table th, .results-table td {
+    padding: 6.5px;
+    text-align: left;
+    border-bottom: 1px solid #9370DB;
+}
+
+.results-table th {
+    background-color: #9370DB;
+}
+
+.results-table tr:hover {
+    background-color: #9370DB;
+}
+
+.github-projects a:hover {
+    text-decoration: none;
+    
+}
+
+.github-projects a {
+    color: #d400ff;  /* GitHub link blue */
+    text-decoration: none;
+}
+/* Mobile-first breakpoints */
+@media screen and (max-width: 876px) {
+    /* Introduction section adjustments */
+    .intro {
+        flex-direction: column;
+        height: 100vh;
+        min-height: 100vh;
+        padding: 2rem 1rem;
+    }
+
+    .text-container {
+        width: 100vw;
+        padding: 2rem 1rem;
+        text-align: left;
+        position: relative;
+        z-index: 100;
+        top: 35%;
+        /* background-color: #000000a1;
+        border-radius: 50%; */
+    }
+
+    .intro h1 {
+        font-size: 1.8rem;
+    }
+
+    .intro h2 {
+        font-size: 3.7rem;
+    }
+
+    .intro h3 {
+        font-size: 1.8rem;
+    }
+
+    span.txt-rotate {
+        font-size: 3.2rem;
+    }
+
+    .intro p {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+
+    .profile-container {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-end; /* Keep this */
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        right: 0; /* Add this instead of right: auto */
+    }
+    .circle-bg {
+        position: absolute; /* Add this */
+        right: 0; /* Add this */
+        width: 120vw;
+        height: 100vh;
+        z-index: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .profile-image {
+        position: relative;
+        height: 100vh;
+        width: auto; /* Change from 100% to auto */
+        z-index: 0;
+        /* Remove float: right as it won't work with flex positioning */
+    }
+
+    /* Horizontal section adjustments */
+    .horizontal-section {
+        height: 400vh;
+    }
+
+    .horizontal-container {
+        background-size: 80%;
+    }
+
+    .horizontal-content {
+        width: 500%;
+    }
+
+    /* Keep main circles circular */
+    .main-circle {
+        width: 28vmin;
+        height: 28vmin;
+    }
+
+    /* Keep subcircles circular */
+    .subcircle {
+        width: 20vmin;
+        height: 20vmin;
+    }
+
+    /* Modal card adjustments - make oval */
+    .modal-card {
+        width: 95vmin;
+        height: 120vmin; /* Increased height significantly */
+        border-radius: 45vmin / 60vmin; /* Oval shape */
+        padding: 3rem 2rem;
+    }
+
+    .modal-title {
+        font-size: 1.4rem;
+        margin-top: 2rem;
+    }
+
+    .modal-content {
+        max-height: 60%; /* Increased content area */
+        font-size: 1rem;
+        padding: 0 2rem;
+        margin-top: 1rem;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+
+    /* Showcase circles positioning */
+    .showcase-circle {
+        width: 35vmin;
+        height: 35vmin; /* Keep circular */
+        border-radius: 50%;
+    }
+
+    .showcase-circle-1 {
+        top: -15%;
+        left: -3%;
+    }
+
+    .showcase-circle-2 {
+        bottom: -20%;
+        right: -1%;
+    }
+
+    .close-btn {
+        top: 8%;
+        right: 20%;
+        font-size: 1.5rem;
+    }
+
+    .subcircle-text {
+        text-align: center;
+        padding: 0.1rem;
+        font-weight: bold;
+        color: #ffffff;
+        max-width: 90%;
+        font-size: calc(0.8vmin + 0.5rem); /* Smaller text */
+    }
+}
+
+/* Tablet breakpoint */
+@media screen and (min-width: 540px) and (max-width: 1024px) {
+    .intro {
+        height: auto;
+        min-height: 100vh;
+    }
+    .circle-bg {
+        align-self: right;
+        right: auto;
+        left: -1%; 
+        width: 80vw;
+        height: 100vh;
+        z-index: 0;
+        margin: 0;
+        padding: 0 0 0 0;
+    }
+    .text-container {
+        padding: 3rem 2rem;
+        max-width: 80%;
+    }
+
+    span.txt-rotate {
+        font-size: 4.5rem;
+    }
+
+    .profile-container {
+        height: 100vh;
+    }
+
+    .modal-card {
+        width: 80vmin;
+        height: 100vmin;
+        border-radius: 40vmin / 50vmin;
+    }
+
+    .showcase-circle {
+        width: 31vmin;
+        height: 31vmin;
+    }
+
+    .showcase-circle-1 {
+        top: -15%;
+        left: -5%;
+    }
+
+    .showcase-circle-2 {
+        bottom: -15%;
+        right: -5%;
+    }
+}
+
+/* Larger screens */
+@media screen and (min-width: 1025px) {
+    .modal-card {
+        width: 90vmin;
+        height: 90vmin;
+        border-radius: 50%;
+    }
+
+    .showcase-circle {
+        width: 35vmin;
+        height: 35vmin;
+    }
+
+    .showcase-circle-1 {
+        top: -3%;
+        left: -20%;
+    }
+
+    .showcase-circle-2 {
+        bottom: -3%;
+        right: -20%;
+    }
+}
+
+/* Landscape orientation fixes */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .intro {
+        flex-direction: row;
+        height: auto;
+        min-height: 100vh;
+        padding: 1rem;
+    }
+    .circle-bg {
+        position: absolute;
+        right: -50%; /* Adjust this value as needed */
+        width: 150vh; /* Use vh units to maintain circle aspect */
+        height: 150vh;
+        z-index: 0;
+        transform: translateX(25%); /* Help center the circle */
+    }
+    .text-container {
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .profile-container {
+        width: 50%;
+        height: 100vh;
+    }
+
+    .modal-card {
+        width:90vmin;
+        height: 80vmin;
+        border-radius: 42.5vmin / 40vmin;
+    }
+
+    .modal-content {
+        max-height: 50%;
+        overflow-x: hidden;
+    }
+
+    .showcase-circle {
+        width: 40vmin;
+        height: 40vmin;
+    }
+     .showcase-circle-1 {
+        top: 30%;
+        left: -50%;
+    }
+
+    .showcase-circle-2 {
+        bottom: 20%;
+        right: -50%;
+    }
 }
