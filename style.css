@@ -85,7 +85,6 @@ body {
     top: 0;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
     display: flex;
     align-items: center;
 }
@@ -324,7 +323,7 @@ body {
     width: 100%;
 }
 
-.time-period {
+.period-text {
     color: #9370DB;
     font-style: italic;
     margin-top: 1rem;
@@ -431,12 +430,16 @@ footer {
     height: 25vmin;
     border-radius: 50%;
     background-color: #1a0920;
-    border: 2px solid #9834db;
+    border: 3px solid #9834db;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
 
 .showcase-circle:hover {
+    transform: scale(1.1);
+}
+
+.showcase-circle:hover .showcase-image {
     transform: scale(1.1);
 }
 
@@ -458,10 +461,37 @@ footer {
     align-items: center;
     color: #ffffff;
     text-align: center;
-    padding: 1rem;
     background: linear-gradient(45deg, #521166, #9834db);
 }
 
+.showcase-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.showcase-error {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #521166;
+    color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.showcase-loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #521166, #9834db);
+    color: #ffffff;
+}
 
 span.txt-rotate {
     display: inline-block;
@@ -482,6 +512,7 @@ span.txt-rotate {
     justify-content: flex-end;
     align-items: center;
     overflow: hidden;
+    max-width: 100vw;
 }
 
 .circle-bg {
@@ -546,25 +577,37 @@ span.txt-rotate {
 
 .github-projects a:hover {
     text-decoration: none;
-    
+    color: #ffffff;
 }
 
 .github-projects a {
     color: #d400ff;  /* GitHub link blue */
     text-decoration: none;
 }
+
 /* Mobile-first breakpoints */
 @media screen and (max-width: 876px) {
     /* Introduction section adjustments */
+    html{
+        scroll-behavior: smooth;
+    }
+    body{
+        background-color: #000000;
+    }
     .intro {
         flex-direction: column;
         height: 100vh;
         min-height: 100vh;
         padding: 2rem 1rem;
     }
+    .showcase-image {
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    }
 
     .text-container {
-        width: 100vw;
         padding: 2rem 1rem;
         text-align: left;
         position: relative;
@@ -631,6 +674,7 @@ span.txt-rotate {
 
     .horizontal-container {
         background-size: 80%;
+        overflow-x: hidden;
     }
 
     .horizontal-content {
@@ -645,13 +689,13 @@ span.txt-rotate {
 
     /* Keep subcircles circular */
     .subcircle {
-        width: 20vmin;
-        height: 20vmin;
+        width: 21vmin;
+        height: 21vmin;
     }
 
     /* Modal card adjustments - make oval */
     .modal-card {
-        width: 95vmin;
+        width: 98vmin;
         height: 120vmin; /* Increased height significantly */
         border-radius: 45vmin / 60vmin; /* Oval shape */
         padding: 3rem 2rem;
@@ -691,7 +735,7 @@ span.txt-rotate {
     .close-btn {
         top: 8%;
         right: 20%;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .subcircle-text {
@@ -776,6 +820,10 @@ span.txt-rotate {
     .showcase-circle-2 {
         bottom: -3%;
         right: -20%;
+    }
+
+    .close-btn{
+        font-size: 1.8rem;
     }
 }
 

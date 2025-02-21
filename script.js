@@ -54,6 +54,45 @@ document.addEventListener('DOMContentLoaded', () => {
         positionBranches();
     };
 
+    const createShowcaseCircle = (className, imageSrc, caption) => {
+        const showcase = document.createElement('div');
+        showcase.className = `showcase-circle ${className}`;
+        
+        // Start with loading state
+        showcase.innerHTML = '<div class="showcase-loading">Loading...</div>';
+        
+        if (imageSrc) {
+            const img = new Image();
+            img.className = 'showcase-image';
+            img.src = imageSrc;
+            
+            img.onload = () => {
+                showcase.innerHTML = `
+                    <div class="showcase-content">
+                        <img class="showcase-image" src="${imageSrc}" alt="${caption || ''}" />
+                        ${caption ? `<div class="showcase-caption">${caption}</div>` : ''}
+                    </div>
+                `;
+            };
+            
+            img.onerror = () => {
+                showcase.innerHTML = `
+                    <div class="showcase-error">
+                        Unable to load image
+                    </div>
+                `;
+            };
+        } else {
+            showcase.innerHTML = `
+                <div class="showcase-content">
+                    <div class="showcase-error">No image available</div>
+                </div>
+            `;
+        }
+        
+        return showcase;
+    };
+
     // Position subcircle branches in a circular pattern around main circles
     const positionBranches = () => {
         mainCircles.forEach(mainCircle => {
@@ -215,6 +254,8 @@ document.addEventListener('DOMContentLoaded', () => {
         isAnyMainCircleExpanded = false;
     };
     
+    
+
     // Subcircle hover effects
     document.querySelectorAll('.subcircle').forEach(subcircle => {
         // Mouse enter effect for subcircles
@@ -240,6 +281,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 duration: 300
             });
         });
+        
+        
         
         // Mouse leave effect for subcircles
         subcircle.addEventListener('mouseleave', () => {
@@ -274,6 +317,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const title = subcircle.dataset.title || "Detail Title";
             const period = subcircle.dataset.period || "Period Information";
             const content = subcircle.dataset.content || "Detailed description goes here.";
+            const image1 = subcircle.dataset.image1;
+            const image2 = subcircle.dataset.image2;
             let tableHTML = '';
     
     if (subcircle.dataset.table) {
@@ -315,11 +360,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const links = JSON.parse(subcircle.dataset.githubLinks);
             if (links.length > 0) {
                 githubLinksHtml = `
-                    <ul class="github-projects type="none">
+                    <ul class="github-projects" type="disc">
                         ${links.map(link => `
                             <li>
                                 <a href="${link.url}" target="_blank">
-                                    ${link.name} ${link.additional}
+                                    ${link.name} <br> ${link.additional}
                                 </a>
                             </li>
                         `).join('')}
@@ -335,28 +380,32 @@ document.addEventListener('DOMContentLoaded', () => {
             modalTitle.textContent = title;
             modalContent.innerHTML = `<div class="modal-scroll-container"><p class="period-text">${period}</p><p>${content}</p>${tableHTML}<br>${githubLinksHtml}</div>`;
             
-            if (!modalCard.querySelector('.showcase-circle')) {
-                const showcase1 = document.createElement('div');
-                showcase1.className = 'showcase-circle showcase-circle-1';
-                showcase1.innerHTML = '<div class="showcase-content">Showcase 1</div>';
-                
-                const showcase2 = document.createElement('div');
-                showcase2.className = 'showcase-circle showcase-circle-2';
-                showcase2.innerHTML = '<div class="showcase-content">Showcase 2</div>';
-                
-                modalCard.appendChild(showcase1);
-                modalCard.appendChild(showcase2);
-            }
             
-
+            modalCard.querySelectorAll('.showcase-circle').forEach(circle => circle.remove());
+                
+            const showcase1 = createShowcaseCircle('showcase-circle-1', image1);
+            const showcase2 = createShowcaseCircle('showcase-circle-2', image2);
+                
+            modalCard.appendChild(showcase1);
+            modalCard.appendChild(showcase2);
             modalOverlay.style.display = "flex";
-            anime({
+            anime.timeline({
+                easing: 'easeOutQuad'
+            })
+            .add({
                 targets: modalCard,
                 scale: [0, 1],
                 opacity: [0, 1],
                 duration: 500,
-                easing: 'easeOutQuad',
                 complete: () => { isModalOpen = true; }
+            })
+            .add({
+                targets: ['.showcase-circle-1', '.showcase-circle-2'],
+                scale: [0, 1],
+                opacity: [0, 1],
+                duration: 600,
+                delay: anime.stagger(200),
+                easing: 'easeOutElastic(1, 0.5)'
             });
         });
     });
