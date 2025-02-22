@@ -717,13 +717,13 @@ span.txt-rotate {
 
     /* Showcase circles positioning */
     .showcase-circle {
-        width: 35vmin;
-        height: 35vmin; /* Keep circular */
+        width: 37vmin;
+        height: 37vmin; /* Keep circular */
         border-radius: 50%;
     }
 
     .showcase-circle-1 {
-        top: -15%;
+        top: -23%;
         left: -3%;
     }
 
@@ -797,10 +797,41 @@ span.txt-rotate {
         bottom: -15%;
         right: -5%;
     }
+    .horizontal-container {
+        overflow: visible;
+    }
+    .horizontal-content{
+        max-width: 300%;
+    }
+    .profile-container {
+        overflow: hidden;
+        max-width: 100%;
+    }
+    
+    .circle-bg {
+        right: -10%;  /* Adjust from -1% */
+        width: 100%;  /* Adjust from 80vw */
+        overflow: hidden;
+    }
+    .horizontal-container {
+        overflow: visible;
+    }
+    
+    .profile-container {
+        overflow: hidden;
+        max-width: 100%;
+    }
+    
+    .circle-bg {
+        right: -10%;  /* Adjust from -1% */
+        width: 100%;  /* Adjust from 80vw */
+        overflow: hidden;
+    }
+
 }
 
 /* Larger screens */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 10245px) {
     .modal-card {
         width: 90vmin;
         height: 90vmin;
@@ -824,6 +855,9 @@ span.txt-rotate {
 
     .close-btn{
         font-size: 1.8rem;
+    }
+    .circle-container{
+        overflow: auto;
     }
 }
 
@@ -876,5 +910,114 @@ span.txt-rotate {
     .showcase-circle-2 {
         bottom: 20%;
         right: -50%;
+    }
+}
+@media screen and (max-width: 876px) {
+    .profile-container {
+
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .profile-image {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+       
+    }
+
+    .circle-bg {
+        right: -50%;
+        width: 150%;
+        height: 150%;
+    }
+}
+
+@media screen and (max-width: 876px) {
+    .text-container {
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 0 50% 50% 0;;
+        backdrop-filter: blur(5px);
+        width: 100%;
+        right: 5%;
+    }
+}
+@media screen and (max-width: 876px) {
+    .horizontal-section {
+        height: 500vh; /* Increase scroll area for mobile */
+    }
+
+    .horizontal-container {
+        overflow: hidden;
+        background-size: 100%;
+    }
+
+    .main-circle {
+        width: 35vmin;
+        height: 35vmin;
+    }
+
+    .subcircle {
+        width: 25vmin;
+        height: 25vmin;
+    }
+    .intro h1{
+        padding-top: 1rem;
+    }
+}
+@media screen and (max-width: 876px) {
+    .modal-card {
+        width: 90vw;
+        min-height: 60vh;
+        border-radius: 20px;
+        padding: 2rem 1rem;
+    }
+
+    .modal-content {
+        max-height: 55vh;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .close-btn {
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .showcase-circle {
+        border-radius: 0%; 
+    }
+    .modal-overlay{
+        width: 100vw;
+        height: 100vh;
+    }
+}@media screen and (min-width: 877px) and (max-width: 876px) {
+    .intro {
+        height: 100vh;
+    }
+
+    .profile-container {
+        width: 60%;
+    }
+
+    .text-container {
+        width: 50%;
+        padding: 2rem;
+    }
+
+    .horizontal-section {
+        height: 400vh;
+    }
+
+    .main-circle {
+        width: 30vmin;
+        height: 30vmin;
+    }
+
+    .modal-card {
+        width: 80vw;
+        height: 80vh;
+        border-radius: 30px;
     }
 }

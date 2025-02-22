@@ -10,7 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalContent = document.querySelector('.modal-content');
     // periodText assumed to be inside modalContent if needed
     const periodText = document.querySelector('.period-text');
-    
+    var docWidth = document.documentElement.offsetWidth;
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
+
     // Set initial values
     let scrollProgress = 0;
     let currentActiveMainCircle = null;
@@ -481,4 +490,33 @@ document.addEventListener('DOMContentLoaded', () => {
         css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #9b3cb8 }";
         document.body.appendChild(css);
       };
+});
+// Add to script.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Add touch events for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    document.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    document.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchEndX - touchStartX;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                // Swipe right
+                if (currentActiveMainCircle) {
+                    closeExpandedMainCircle();
+                }
+            }
+        }
+    }
 });
