@@ -1004,6 +1004,7 @@ span.txt-rotate {
     .text-container {
         width: 50%;
         padding: 2rem;
+        z-index: 1;
     }
 
     .horizontal-section {
