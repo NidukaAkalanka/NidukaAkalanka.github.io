@@ -992,6 +992,8 @@ span.txt-rotate {
         width: 100vw;
         height: 100vh;
     }
+    .text-container {
+      z-index:1;}  
 }@media screen and (min-width: 877px) and (max-width: 876px) {
     .intro {
         height: 100vh;
